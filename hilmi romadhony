@@ -1,0 +1,26 @@
+CREATE DATABASE perpustakaan;
+
+USE perpustakaan;
+
+CREATE TABLE buku (
+  id INT PRIMARY KEY,
+  judul VARCHAR(255),
+  pengarang VARCHAR(255),
+  tahun_terbit INT,
+  jumlah_buku INT
+);
+
+CREATE TABLE anggota (
+  id INT PRIMARY KEY,
+  nama VARCHAR(255),
+  email VARCHAR(255),
+  password VARCHAR(255)
+);
+
+CREATE TABLE peminjaman (
+  id INT PRIMARY KEY,
+  id_buku INT,
+  id_anggota INT,
+  tanggal_pinjam DATE,
+  tanggal_kembali DATE
+);
